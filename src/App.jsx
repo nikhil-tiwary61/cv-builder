@@ -4,6 +4,7 @@ import GeneralInformationForm from "./components/sidebar/GeneralInformationForm"
 import GeneralInformation from "./components/resume/GeneralInformation";
 import EducationForm from "./components/sidebar/EducationForm";
 import Education from "./components/resume/Education";
+import ExperienceForm from "./components/sidebar/ExperienceForm";
 
 export default function App() {
   //state variables for General Information
@@ -51,6 +52,7 @@ export default function App() {
           changeFieldOfStudy={changeFieldOfStudy}
           changeYearOfGraduation={changeYearOfGraduation}
         />
+        <ExperienceForm></ExperienceForm>
       </div>
       <div className="resume">
         <GeneralInformation

@@ -1,0 +1,9 @@
+.experience {
+  width: 10em;
+}
+
+.form-experience {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
