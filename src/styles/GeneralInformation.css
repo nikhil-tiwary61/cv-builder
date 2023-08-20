@@ -1,0 +1,9 @@
+.general-information {
+  width: 10em;
+}
+
+.form-general-information {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}

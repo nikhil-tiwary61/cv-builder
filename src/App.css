@@ -1,1 +1,13 @@
+.main-page {
+  display: flex;
+  flex-direction: row;
+}
 
+.sidebar {
+  flex-grow: 1;
+}
+
+.resume {
+  flex-grow: 4;
+  background-color: white;
+}
