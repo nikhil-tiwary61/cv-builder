@@ -1,12 +1,13 @@
 import './App.css'
 import { useState } from "react"
 import GeneralInformationForm from './components/GeneralInformationForm'
+import GeneralInformation from './components/resume/GeneralInformation';
 
 export default function App() {
   //state variables for General Information
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [name, setName] = useState("Nikhil");
+  const [email, setEmail] = useState("abc@xyz.com");
+  const [phoneNumber, setPhoneNumber] = useState("9998886666");
 
   //handle functions to change state variables of General Information
   function changeName(e){
@@ -25,8 +26,7 @@ export default function App() {
       <GeneralInformationForm changeName={changeName} changeEmail={changeEmail} changePhoneNumber={changePhoneNumber} />
     </div>
     <div className="resume">
-      Resume
-      {name}{email}{phoneNumber}
+      <GeneralInformation name={name} email={email} phoneNumber={phoneNumber} />
     </div>
     </div>
   )
