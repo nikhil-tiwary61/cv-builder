@@ -18,7 +18,7 @@ export default function GeneralInformationForm({ changeName, changeEmail, change
         <br />
         <input type="text" placeholder="Enter phone number" onChange={changePhoneNumber} />
         </label>
-        {/* <br /> */}
+        <br />
         {/* <input type="submit" /> */}
       </form>
     </div>

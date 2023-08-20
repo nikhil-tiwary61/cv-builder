@@ -1,0 +1,9 @@
+.education {
+  width: 10em;
+}
+
+.form-education {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
