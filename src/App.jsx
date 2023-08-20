@@ -2,6 +2,7 @@ import './App.css'
 import { useState } from "react"
 import GeneralInformationForm from './components/GeneralInformationForm'
 import GeneralInformation from './components/resume/GeneralInformation';
+import EducationForm from './components/EducationForm';
 
 export default function App() {
   //state variables for General Information
@@ -24,6 +25,7 @@ export default function App() {
     <div className="main-page">
     <div className="sidebar">
       <GeneralInformationForm changeName={changeName} changeEmail={changeEmail} changePhoneNumber={changePhoneNumber} />
+      <EducationForm /> 
     </div>
     <div className="resume">
       <GeneralInformation name={name} email={email} phoneNumber={phoneNumber} />
