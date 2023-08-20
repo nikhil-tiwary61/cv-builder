@@ -1,6 +1,6 @@
 import './App.css'
 import { useState } from "react"
-import GeneralInformation from './components/GeneralInformation'
+import GeneralInformationForm from './components/GeneralInformationForm'
 
 export default function App() {
   //state variables for General Information
@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div className="main-page">
     <div className="sidebar">
-      <GeneralInformation changeName={changeName} changeEmail={changeEmail} changePhoneNumber={changePhoneNumber} />
+      <GeneralInformationForm changeName={changeName} changeEmail={changeEmail} changePhoneNumber={changePhoneNumber} />
     </div>
     <div className="resume">
       Resume

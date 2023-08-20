@@ -1,6 +1,6 @@
-import "../styles/GeneralInformation.css"
+import "../styles/GeneralInformationForm.css"
 
-function GeneralInformation({ changeName, changeEmail, changePhoneNumber }){
+function GeneralInformationForm({ changeName, changeEmail, changePhoneNumber }){
   return (
     <div className="general-information">
       <form action="" className="form-general-information">
@@ -25,4 +25,4 @@ function GeneralInformation({ changeName, changeEmail, changePhoneNumber }){
   )
 }
 
-export default GeneralInformation;
+export default GeneralInformationForm;
