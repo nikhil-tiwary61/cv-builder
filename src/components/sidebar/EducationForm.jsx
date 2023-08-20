@@ -1,3 +1,5 @@
+import "../../styles/EducationForm.css";
+
 export default function EducationForm({
   changeInstitute,
   changeFieldOfStudy,

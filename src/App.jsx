@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState } from "react";
-import GeneralInformationForm from "./components/GeneralInformationForm";
+import GeneralInformationForm from "./components/sidebar/GeneralInformationForm";
 import GeneralInformation from "./components/resume/GeneralInformation";
-import EducationForm from "./components/EducationForm";
+import EducationForm from "./components/sidebar/EducationForm";
 import Education from "./components/resume/Education";
 
 export default function App() {
