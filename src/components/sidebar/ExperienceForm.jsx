@@ -1,3 +1,5 @@
+import "../../styles/ExperienceForm.css";
+
 export default function ExperienceForm({
   changeCompany,
   changeTitle,
@@ -6,7 +8,7 @@ export default function ExperienceForm({
   changeTo,
 }) {
   return (
-    <div className="experiience">
+    <div className="experience">
       <form action="" className="form-experience">
         <legend>Experience</legend>
         <br />

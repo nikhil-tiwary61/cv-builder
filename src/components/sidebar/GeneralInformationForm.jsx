@@ -9,6 +9,7 @@ export default function GeneralInformationForm({
     <div className="general-information">
       <form action="" className="form-general-information">
         <legend>General Information</legend>
+        <hr className="sidebar-hr" />
         <br />
         <label htmlFor="">
           Full Name
@@ -38,7 +39,6 @@ export default function GeneralInformationForm({
           />
         </label>
         <br />
-        {/* <input type="submit" /> */}
       </form>
     </div>
   );
