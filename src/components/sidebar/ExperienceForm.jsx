@@ -45,13 +45,13 @@ export default function ExperienceForm({
         <label htmlFor="">
           From
           <br />
-          <input type="date" onChange={changeFrom} />
+          <input type="month" onChange={changeFrom} />
           <br />
         </label>
         <label htmlFor="">
           To
           <br />
-          <input type="date" onChange={changeTo} />
+          <input type="month" onChange={changeTo} />
           <br />
         </label>
         <br />

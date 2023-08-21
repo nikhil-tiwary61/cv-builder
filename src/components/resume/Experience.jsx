@@ -9,8 +9,9 @@ export default function Education({
     <section>
       <h2>Experience</h2>
       <p>Company : {company}</p>
-      <p>From : {from}</p>
-      <p>To : {to}</p>
+      <p>
+        {from} - {to}
+      </p>
       <p>Job Title : {title}</p>
       <p>Responsibilities : {responsibility}</p>
     </section>
