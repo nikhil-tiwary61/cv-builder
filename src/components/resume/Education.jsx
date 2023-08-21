@@ -9,9 +9,12 @@ export default function Education({
     <section className="resume-education">
       <h2>Education</h2>
       <hr className="horizontal-line" />
-      <p>Name of the Institution : {institute}</p>
-      <p>Field of study : {fieldOfStudy}</p>
-      <p>Year of graduation : {yearOfGraduation}</p>
+      <br />
+      <div className="institute-gradyear">
+        <h4>{institute}</h4>
+        <h4>Graduation : {yearOfGraduation}</h4>
+      </div>
+      <h4>{fieldOfStudy}</h4>
     </section>
   );
 }

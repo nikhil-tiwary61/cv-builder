@@ -1,4 +1,6 @@
 import "../../styles/GeneralInformation.css";
+import emailPic from "../../../public/email.png";
+import phonePic from "../../../public/phone.png";
 
 export default function GeneralInformation({ name, email, phoneNumber }) {
   return (
@@ -7,8 +9,22 @@ export default function GeneralInformation({ name, email, phoneNumber }) {
         <h1 className="username">{name}</h1>
       </div>
       <div className="information">
-        <p>Email : {email}</p>
-        <p>Phone No : {phoneNumber}</p>
+        <div className="email">
+          <img
+            src={emailPic}
+            alt="Email"
+            className="icon-general-information"
+          />
+          <h4> {email}</h4>
+        </div>
+        <div className="phone">
+          <img
+            src={phonePic}
+            alt="Phone No."
+            className="icon-general-information"
+          />
+          <p> {phoneNumber}</p>
+        </div>
       </div>
     </section>
   );
