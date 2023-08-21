@@ -87,24 +87,26 @@ export default function App() {
           changeTo={changeTo}
         />
       </div>
-      <div className="resume">
-        <GeneralInformation
-          name={name}
-          email={email}
-          phoneNumber={phoneNumber}
-        />
-        <Education
-          institute={institute}
-          fieldOfStudy={fieldOfStudy}
-          yearOfGraduation={yearOfGraduation}
-        />
-        <Experience
-          company={company}
-          title={title}
-          responsibility={responsibility}
-          from={from}
-          to={to}
-        />
+      <div className="right-side-view">
+        <div className="resume">
+          <GeneralInformation
+            name={name}
+            email={email}
+            phoneNumber={phoneNumber}
+          />
+          <Education
+            institute={institute}
+            fieldOfStudy={fieldOfStudy}
+            yearOfGraduation={yearOfGraduation}
+          />
+          <Experience
+            company={company}
+            title={title}
+            responsibility={responsibility}
+            from={from}
+            to={to}
+          />
+        </div>
       </div>
     </div>
   );
