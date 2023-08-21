@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState } from "react";
+import Logo from "./components/sidebar/Logo";
 import GeneralInformationForm from "./components/sidebar/GeneralInformationForm";
 import GeneralInformation from "./components/resume/GeneralInformation";
 import EducationForm from "./components/sidebar/EducationForm";
@@ -69,6 +70,7 @@ export default function App() {
   return (
     <div className="main-page">
       <div className="sidebar">
+        <Logo />
         <GeneralInformationForm
           changeName={changeName}
           changeEmail={changeEmail}

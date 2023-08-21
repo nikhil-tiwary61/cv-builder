@@ -1,0 +1,15 @@
+.logo-box {
+  margin-top: 2em;
+  width: 15em;
+  height: 6em;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.logo {
+  font-size: 2em;
+  font-weight: 700;
+  color: #242424;
+}
