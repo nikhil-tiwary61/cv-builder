@@ -9,6 +9,7 @@ export default function EducationForm({
     <div className="education">
       <form action="" className="form-education">
         <legend>Education</legend>
+        <hr className="sidebar-hr" />
         <br />
         <label htmlFor="">
           Name of Institute <br />
