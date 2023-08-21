@@ -1,14 +1,10 @@
-import { useState } from "react";
-
 export default function ExperienceForm({
   changeCompany,
   changeTitle,
   changeResponsibility,
-  onChange = {},
+  changeFrom,
+  changeTo,
 }) {
-  const [from, setFrom] = useState("");
-  const [to, setTo] = useState("");
-
   return (
     <div className="experiience">
       <form action="" className="form-experience">
@@ -49,13 +45,13 @@ export default function ExperienceForm({
         <label htmlFor="">
           From
           <br />
-          <input type="date" />
+          <input type="date" onChange={changeFrom} />
           <br />
         </label>
         <label htmlFor="">
           To
           <br />
-          <input type="date" />
+          <input type="date" onChange={changeTo} />
           <br />
         </label>
         <br />
