@@ -11,6 +11,7 @@ export default function ExperienceForm({
     <div className="experience">
       <form action="" className="form-experience">
         <legend>Experience</legend>
+        <hr className="sidebar-hr" />
         <br />
         <label htmlFor="">
           Company <br />
@@ -41,9 +42,9 @@ export default function ExperienceForm({
             rows="10"
             placeholder="Enter your responsibilities"
             onChange={changeResponsibility}
+            className="text-area"
           ></textarea>
         </label>
-        <br />
         <label htmlFor="">
           From
           <br />

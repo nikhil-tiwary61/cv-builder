@@ -1,9 +1,21 @@
 .experience {
   width: 15em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  border: 2px solid white;
+  border-radius: 15px;
 }
 
 .form-experience {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+}
+
+.text-area {
+  width: 12.4em;
 }
