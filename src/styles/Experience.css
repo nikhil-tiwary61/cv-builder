@@ -1,3 +1,10 @@
 .resume-experience {
   height: 10em;
+  margin: 1.5em;
+}
+
+.title-duration {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
