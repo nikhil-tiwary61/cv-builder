@@ -46,8 +46,8 @@ export default function App() {
   const [responsibility, setResponsibility] = useState(
     "To build component library"
   );
-  const [from, setFrom] = useState("2023/01/01");
-  const [to, setTo] = useState("2023/08/08");
+  const [from, setFrom] = useState("2023/01");
+  const [to, setTo] = useState("2023/08");
 
   //handle functions to change state variables of Experience Information
   function changeCompany(e) {
