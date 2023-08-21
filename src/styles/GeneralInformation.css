@@ -1,0 +1,25 @@
+.resume-general-information {
+  height: 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: darkgray;
+}
+
+.username-box {
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.username {
+  font-size: 3em;
+}
+
+.information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 2em;
+}
