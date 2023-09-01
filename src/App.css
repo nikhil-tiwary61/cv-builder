@@ -41,3 +41,26 @@
   width: 21cm;
   box-shadow: 10px 10px 5px #4b4848;
 }
+
+.collapsible-container {
+  width: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  border: 2px solid white;
+  border-radius: 15px;
+}
+
+.collapsible-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+}
+
+.text-area {
+  width: 12.4em;
+}
