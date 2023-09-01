@@ -19,42 +19,18 @@ export default function App() {
     console.log(resume);
   }
 
-  //state variables for Education Information
-  const [institute, setInstitute] = useState("IIT Bombay");
-  const [fieldOfStudy, setFieldOfStudy] = useState("Computer Science");
-  const [yearOfGraduation, setYearOfGraduation] = useState("2022");
-
-  //handle functions to change state variables of Education Information
-  function changeInstitute(e) {
-    setInstitute(e.target.value);
-  }
-  function changeFieldOfStudy(e) {
-    setFieldOfStudy(e.target.value);
-  }
-  function changeYearOfGraduation(e) {
-    setYearOfGraduation(e.target.value);
-  }
-
   return (
     <div className="main-page">
       <div className="sidebar">
         <Logo />
         <GeneralInformationForm resume={resume} changeResume={changeResume} />
-        <EducationForm
-          changeInstitute={changeInstitute}
-          changeFieldOfStudy={changeFieldOfStudy}
-          changeYearOfGraduation={changeYearOfGraduation}
-        />
+        <EducationForm resume={resume} changeResume={changeResume} />
         <ExperienceForm resume={resume} changeResume={changeResume} />
       </div>
       <div className="right-side-view">
         <div className="resume">
           <GeneralInformation resume={resume} />
-          <Education
-            institute={institute}
-            fieldOfStudy={fieldOfStudy}
-            yearOfGraduation={yearOfGraduation}
-          />
+          <Education resume={resume} />
           <Experience resume={resume} />
         </div>
       </div>

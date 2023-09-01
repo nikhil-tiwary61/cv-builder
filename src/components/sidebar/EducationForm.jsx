@@ -1,10 +1,6 @@
 import "../../styles/EducationForm.css";
 
-export default function EducationForm({
-  changeInstitute,
-  changeFieldOfStudy,
-  changeYearOfGraduation,
-}) {
+export default function EducationForm({ resume, changeResume }) {
   return (
     <div className="education">
       <form action="" className="form-education">
@@ -15,18 +11,22 @@ export default function EducationForm({
           Name of Institute <br />
           <input
             type="text"
+            name="institute"
+            value={resume.institute || ""}
             placeholder="Enter name of institute"
-            onChange={changeInstitute}
+            onChange={changeResume}
           />
           <br />
         </label>
         <label htmlFor="">
-          Title of Study
+          Field of Study
           <br />
           <input
             type="text"
+            name="fieldOfStudy"
+            value={resume.fieldOfStudy || ""}
             placeholder="Enter title of Study"
-            onChange={changeFieldOfStudy}
+            onChange={changeResume}
           />
           <br />
         </label>
@@ -35,8 +35,10 @@ export default function EducationForm({
           <br />
           <input
             type="text"
+            name="yearOfGraduation"
+            value={resume.yearOfGraduation || ""}
             placeholder="Enter Year of Graduation"
-            onChange={changeYearOfGraduation}
+            onChange={changeResume}
           />
           <br />
         </label>
