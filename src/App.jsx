@@ -30,7 +30,7 @@ export default function App() {
         <EducationForm resume={resume} changeResume={changeResume} />
         <ExperienceForm resume={resume} changeResume={changeResume} />
         <ReactToPrint
-          trigger={() => <button>Print</button>}
+          trigger={() => <button id="print-button">Print</button>}
           content={() => componentRef}
         />
       </div>
