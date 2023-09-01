@@ -1,16 +1,15 @@
-import "../../styles/GeneralInformationForm.css";
 import { useState } from "react";
 
 export default function GeneralInformationForm({ resume, changeResume }) {
   const [open, setOpen] = useState(true);
 
   return (
-    <div className="general-information">
+    <div className="collapsible-container">
       <button className="collapsible" onClick={() => setOpen(!open)}>
         General Information {open ? "-" : "+"}
       </button>
       {open && (
-        <form action="" className="form-general-information">
+        <form action="" className="collapsible-form">
           <br />
           <label htmlFor="">
             Full Name

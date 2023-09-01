@@ -1,15 +1,14 @@
-import "../../styles/EducationForm.css";
 import { useState } from "react";
 
 export default function EducationForm({ resume, changeResume }) {
   const [open, setOpen] = useState(true);
   return (
-    <div className="education">
+    <div className="collapsible-container">
       <button className="collapsible" onClick={() => setOpen(!open)}>
         Education {open ? "-" : "+"}
       </button>
       {open && (
-        <form action="" className="form-education">
+        <form action="" className="collapsible-form">
           <br />
           <label htmlFor="">
             Name of Institute <br />

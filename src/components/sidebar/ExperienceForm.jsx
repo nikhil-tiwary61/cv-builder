@@ -1,15 +1,14 @@
-import "../../styles/ExperienceForm.css";
 import { useState } from "react";
 
 export default function ExperienceForm({ resume, changeResume }) {
   const [open, setOpen] = useState(true);
   return (
-    <div className="experience">
+    <div className="collapsible-container">
       <button className="collapsible" onClick={() => setOpen(!open)}>
         Experience {open ? "-" : "+"}
       </button>
       {open && (
-        <form action="" className="form-experience">
+        <form action="" className="collapsible-form">
           <legend>Experience</legend>
           <hr className="sidebar-hr" />
           <br />
