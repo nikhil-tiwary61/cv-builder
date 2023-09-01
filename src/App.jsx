@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Logo from "./components/sidebar/Logo";
 import GeneralInformationForm from "./components/sidebar/GeneralInformationForm";
 import GeneralInformation from "./components/resume/GeneralInformation";
@@ -7,107 +7,38 @@ import EducationForm from "./components/sidebar/EducationForm";
 import Education from "./components/resume/Education";
 import ExperienceForm from "./components/sidebar/ExperienceForm";
 import Experience from "./components/resume/Experience";
+import { dummyResume } from "./data/dummyResume";
+import ReactToPrint from "react-to-print";
 
 export default function App() {
-  //state variables for General Information
-  const [name, setName] = useState("Nikhil");
-  const [email, setEmail] = useState("abc@xyz.com");
-  const [phoneNumber, setPhoneNumber] = useState("9998886666");
+  const [resume, setResume] = useState({ ...dummyResume });
+  let componentRef = useRef();
 
-  //handle functions to change state variables of General Information
-  function changeName(e) {
-    setName(e.target.value);
-  }
-  function changeEmail(e) {
-    setEmail(e.target.value);
-  }
-  function changePhoneNumber(e) {
-    setPhoneNumber(e.target.value);
-  }
-
-  //state variables for Education Information
-  const [institute, setInstitute] = useState("IIT Bombay");
-  const [fieldOfStudy, setFieldOfStudy] = useState("Computer Science");
-  const [yearOfGraduation, setYearOfGraduation] = useState("2022");
-
-  //handle functions to change state variables of Education Information
-  function changeInstitute(e) {
-    setInstitute(e.target.value);
-  }
-  function changeFieldOfStudy(e) {
-    setFieldOfStudy(e.target.value);
-  }
-  function changeYearOfGraduation(e) {
-    setYearOfGraduation(e.target.value);
-  }
-
-  //state variables for Experience Information
-  const [company, setCompany] = useState("Google");
-  const [title, setTitle] = useState("React Developer");
-  const [responsibility, setResponsibility] = useState(
-    "To build component library"
-  );
-  const [from, setFrom] = useState("2023/01");
-  const [to, setTo] = useState("2023/08");
-
-  //handle functions to change state variables of Experience Information
-  function changeCompany(e) {
-    setCompany(e.target.value);
-  }
-  function changeTitle(e) {
-    setTitle(e.target.value);
-  }
-  function changeResponsibility(e) {
-    setResponsibility(e.target.value);
-  }
-  function changeFrom(e) {
-    setFrom(e.target.value.replaceAll("-", "/"));
-  }
-  function changeTo(e) {
-    setTo(e.target.value.replaceAll("-", "/"));
+  //handle functions to change resume
+  function changeResume(e) {
+    const name = e.target.name;
+    const value = e.target.value;
+    setResume({ ...resume, [name]: value });
+    console.log(resume);
   }
 
   return (
     <div className="main-page">
       <div className="sidebar">
         <Logo />
-        <GeneralInformationForm
-          changeName={changeName}
-          changeEmail={changeEmail}
-          changePhoneNumber={changePhoneNumber}
-        />
-        <EducationForm
-          changeInstitute={changeInstitute}
-          changeFieldOfStudy={changeFieldOfStudy}
-          changeYearOfGraduation={changeYearOfGraduation}
-        />
-        <ExperienceForm
-          changeCompany={changeCompany}
-          changeTitle={changeTitle}
-          changeResponsibility={changeResponsibility}
-          changeFrom={changeFrom}
-          changeTo={changeTo}
+        <GeneralInformationForm resume={resume} changeResume={changeResume} />
+        <EducationForm resume={resume} changeResume={changeResume} />
+        <ExperienceForm resume={resume} changeResume={changeResume} />
+        <ReactToPrint
+          trigger={() => <button id="print-button">Print</button>}
+          content={() => componentRef}
         />
       </div>
       <div className="right-side-view">
-        <div className="resume">
-          <GeneralInformation
-            name={name}
-            email={email}
-            phoneNumber={phoneNumber}
-          />
-          <Education
-            institute={institute}
-            fieldOfStudy={fieldOfStudy}
-            yearOfGraduation={yearOfGraduation}
-          />
-          <Experience
-            company={company}
-            title={title}
-            responsibility={responsibility}
-            from={from}
-            to={to}
-          />
+        <div className="resume" ref={(el) => (componentRef = el)}>
+          <GeneralInformation resume={resume} />
+          <Education resume={resume} />
+          <Experience resume={resume} />
         </div>
       </div>
     </div>

@@ -1,12 +1,6 @@
 import "../../styles/ExperienceForm.css";
 
-export default function ExperienceForm({
-  changeCompany,
-  changeTitle,
-  changeResponsibility,
-  changeFrom,
-  changeTo,
-}) {
+export default function ExperienceForm({ resume, changeResume }) {
   return (
     <div className="experience">
       <form action="" className="form-experience">
@@ -17,8 +11,10 @@ export default function ExperienceForm({
           Company <br />
           <input
             type="text"
+            name="company"
+            value={resume.company || ""}
             placeholder="Enter name of Company"
-            onChange={changeCompany}
+            onChange={changeResume}
           />
           <br />
         </label>
@@ -27,8 +23,10 @@ export default function ExperienceForm({
           <br />
           <input
             type="text"
+            name="position"
+            value={resume.position || ""}
             placeholder="Enter title of the position"
-            onChange={changeTitle}
+            onChange={changeResume}
           />
           <br />
         </label>
@@ -40,21 +38,33 @@ export default function ExperienceForm({
             id=""
             cols="30"
             rows="10"
+            name="responsibilities"
+            value={resume.responsibilities || ""}
             placeholder="Enter your responsibilities"
-            onChange={changeResponsibility}
+            onChange={changeResume}
             className="text-area"
           ></textarea>
         </label>
         <label htmlFor="">
           From
           <br />
-          <input type="month" onChange={changeFrom} />
+          <input
+            type="month"
+            name="to"
+            value={resume.to || ""}
+            onChange={changeResume}
+          />
           <br />
         </label>
         <label htmlFor="">
           To
           <br />
-          <input type="month" onChange={changeTo} />
+          <input
+            type="month"
+            name="from"
+            value={resume.from || ""}
+            onChange={changeResume}
+          />
           <br />
         </label>
         <br />
