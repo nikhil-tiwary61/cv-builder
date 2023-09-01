@@ -10,14 +10,14 @@ import Experience from "./components/resume/Experience";
 
 export default function App() {
   //state variables for General Information
-  const [generalInformation, setGeneralInformation] = useState({});
+  const [resume, setResume] = useState({});
 
   //handle functions to change state variables of General Information
-  function changeGeneralInformation(e) {
+  function changeResume(e) {
     const name = e.target.name;
     const value = e.target.value;
-    setGeneralInformation({ ...generalInformation, [name]: value });
-    console.log(generalInformation);
+    setResume({ ...resume, [name]: value });
+    console.log(resume);
   }
 
   //state variables for Education Information
@@ -66,10 +66,7 @@ export default function App() {
     <div className="main-page">
       <div className="sidebar">
         <Logo />
-        <GeneralInformationForm
-          generalInformation={generalInformation}
-          changeGeneralInformation={changeGeneralInformation}
-        />
+        <GeneralInformationForm resume={resume} changeResume={changeResume} />
         <EducationForm
           changeInstitute={changeInstitute}
           changeFieldOfStudy={changeFieldOfStudy}
@@ -85,7 +82,7 @@ export default function App() {
       </div>
       <div className="right-side-view">
         <div className="resume">
-          <GeneralInformation generalInformation={generalInformation} />
+          <GeneralInformation resume={resume} />
           <Education
             institute={institute}
             fieldOfStudy={fieldOfStudy}
