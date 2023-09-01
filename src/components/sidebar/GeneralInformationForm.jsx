@@ -4,6 +4,8 @@ export default function GeneralInformationForm({
   changeName,
   changeEmail,
   changePhoneNumber,
+  generalInformation,
+  changeGeneralInformation,
 }) {
   return (
     <div className="general-information">
@@ -16,8 +18,11 @@ export default function GeneralInformationForm({
           <br />
           <input
             type="text"
+            name="username"
+            value={generalInformation.username || ""}
             placeholder="Enter Your name"
-            onChange={changeName}
+            // onChange={changeName}
+            onChange={changeGeneralInformation}
           />
         </label>
         <label htmlFor="">
@@ -25,8 +30,11 @@ export default function GeneralInformationForm({
           <br />
           <input
             type="email"
+            name="email"
+            value={generalInformation.email || ""}
             placeholder="Enter email"
-            onChange={changeEmail}
+            // onChange={changeEmail}
+            onChange={changeGeneralInformation}
           />
         </label>
         <label htmlFor="">
@@ -34,10 +42,14 @@ export default function GeneralInformationForm({
           <br />
           <input
             type="text"
+            name="phoneNumber"
+            value={generalInformation.phoneNumber || ""}
             placeholder="Enter phone number"
-            onChange={changePhoneNumber}
+            // onChange={changePhoneNumber}
+            onChange={changeGeneralInformation}
           />
         </label>
+        <input type="submit" />
         <br />
       </form>
     </div>

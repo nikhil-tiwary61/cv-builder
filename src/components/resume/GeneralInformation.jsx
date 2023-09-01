@@ -2,11 +2,16 @@ import "../../styles/GeneralInformation.css";
 import emailPic from "../../../public/email.png";
 import phonePic from "../../../public/phone.png";
 
-export default function GeneralInformation({ name, email, phoneNumber }) {
+export default function GeneralInformation({
+  name,
+  email,
+  phoneNumber,
+  generalInformation,
+}) {
   return (
     <section className="resume-general-information">
       <div className="username-box">
-        <h1 className="username">{name}</h1>
+        <h1 className="username">{generalInformation.username}</h1>
       </div>
       <div className="information">
         <div className="email">
@@ -15,7 +20,7 @@ export default function GeneralInformation({ name, email, phoneNumber }) {
             alt="Email"
             className="icon-general-information"
           />
-          <h4> {email}</h4>
+          <h4> {generalInformation.email}</h4>
         </div>
         <div className="phone">
           <img
@@ -23,7 +28,7 @@ export default function GeneralInformation({ name, email, phoneNumber }) {
             alt="Phone No."
             className="icon-general-information"
           />
-          <p> {phoneNumber}</p>
+          <p> {generalInformation.phoneNumber}</p>
         </div>
       </div>
     </section>
