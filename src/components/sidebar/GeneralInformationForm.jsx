@@ -1,14 +1,12 @@
 import "../../styles/GeneralInformationForm.css";
+import { useState } from "react";
 
-export default function GeneralInformationForm({
-  resume,
-  changeResume,
-  open,
-  changeOpen,
-}) {
+export default function GeneralInformationForm({ resume, changeResume }) {
+  const [open, setOpen] = useState(true);
+
   return (
     <div className="general-information">
-      <button className="collapsible" onClick={changeOpen}>
+      <button className="collapsible" onClick={() => setOpen(!open)}>
         General Information {open ? "-" : "+"}
       </button>
       {open && (

@@ -12,7 +12,6 @@ import ReactToPrint from "react-to-print";
 
 export default function App() {
   const [resume, setResume] = useState({ ...dummyResume });
-  const [open, setOpen] = useState(true);
   let componentRef = useRef();
 
   //handle functions to change resume
@@ -23,21 +22,11 @@ export default function App() {
     console.log(resume);
   }
 
-  //handle function to control collapsible
-  function changeOpen() {
-    setOpen(!open);
-  }
-
   return (
     <div className="main-page">
       <div className="sidebar">
         <Logo />
-        <GeneralInformationForm
-          resume={resume}
-          changeResume={changeResume}
-          open={open}
-          changeOpen={changeOpen}
-        />
+        <GeneralInformationForm resume={resume} changeResume={changeResume} />
         <EducationForm resume={resume} changeResume={changeResume} />
         <ExperienceForm resume={resume} changeResume={changeResume} />
         <ReactToPrint
