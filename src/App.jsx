@@ -9,10 +9,9 @@ import ExperienceForm from "./components/sidebar/ExperienceForm";
 import Experience from "./components/resume/Experience";
 
 export default function App() {
-  //state variables for General Information
   const [resume, setResume] = useState({});
 
-  //handle functions to change state variables of General Information
+  //handle functions to change resume
   function changeResume(e) {
     const name = e.target.name;
     const value = e.target.value;
@@ -36,32 +35,6 @@ export default function App() {
     setYearOfGraduation(e.target.value);
   }
 
-  //state variables for Experience Information
-  const [company, setCompany] = useState("Google");
-  const [title, setTitle] = useState("React Developer");
-  const [responsibility, setResponsibility] = useState(
-    "To build component library"
-  );
-  const [from, setFrom] = useState("2023/01");
-  const [to, setTo] = useState("2023/08");
-
-  //handle functions to change state variables of Experience Information
-  function changeCompany(e) {
-    setCompany(e.target.value);
-  }
-  function changeTitle(e) {
-    setTitle(e.target.value);
-  }
-  function changeResponsibility(e) {
-    setResponsibility(e.target.value);
-  }
-  function changeFrom(e) {
-    setFrom(e.target.value.replaceAll("-", "/"));
-  }
-  function changeTo(e) {
-    setTo(e.target.value.replaceAll("-", "/"));
-  }
-
   return (
     <div className="main-page">
       <div className="sidebar">
@@ -72,13 +45,7 @@ export default function App() {
           changeFieldOfStudy={changeFieldOfStudy}
           changeYearOfGraduation={changeYearOfGraduation}
         />
-        <ExperienceForm
-          changeCompany={changeCompany}
-          changeTitle={changeTitle}
-          changeResponsibility={changeResponsibility}
-          changeFrom={changeFrom}
-          changeTo={changeTo}
-        />
+        <ExperienceForm resume={resume} changeResume={changeResume} />
       </div>
       <div className="right-side-view">
         <div className="resume">
@@ -88,13 +55,7 @@ export default function App() {
             fieldOfStudy={fieldOfStudy}
             yearOfGraduation={yearOfGraduation}
           />
-          <Experience
-            company={company}
-            title={title}
-            responsibility={responsibility}
-            from={from}
-            to={to}
-          />
+          <Experience resume={resume} />
         </div>
       </div>
     </div>
