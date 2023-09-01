@@ -7,9 +7,10 @@ import EducationForm from "./components/sidebar/EducationForm";
 import Education from "./components/resume/Education";
 import ExperienceForm from "./components/sidebar/ExperienceForm";
 import Experience from "./components/resume/Experience";
+import { dummyResume } from "./data/dummyResume";
 
 export default function App() {
-  const [resume, setResume] = useState({});
+  const [resume, setResume] = useState({ ...dummyResume });
 
   //handle functions to change resume
   function changeResume(e) {
