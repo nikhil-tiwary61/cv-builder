@@ -8,6 +8,6 @@ export const dummyResume = {
   company: "Google",
   position: "Full-Stack Developer",
   responsibilities: "To develop end-to-end applications for clients",
-  from: "01-2023",
-  to: "08-2023",
+  from: "01/2023",
+  to: "08/2023",
 };
