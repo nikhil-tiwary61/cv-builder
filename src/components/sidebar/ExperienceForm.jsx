@@ -9,8 +9,6 @@ export default function ExperienceForm({ resume, changeResume }) {
       </button>
       {open && (
         <form action="" className="collapsible-form">
-          <legend>Experience</legend>
-          <hr className="sidebar-hr" />
           <br />
           <label htmlFor="">
             Company <br />
