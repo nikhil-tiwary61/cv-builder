@@ -1,9 +1,6 @@
 import "../../styles/GeneralInformationForm.css";
 
 export default function GeneralInformationForm({
-  changeName,
-  changeEmail,
-  changePhoneNumber,
   generalInformation,
   changeGeneralInformation,
 }) {
@@ -21,7 +18,6 @@ export default function GeneralInformationForm({
             name="username"
             value={generalInformation.username || ""}
             placeholder="Enter Your name"
-            // onChange={changeName}
             onChange={changeGeneralInformation}
           />
         </label>
@@ -33,7 +29,6 @@ export default function GeneralInformationForm({
             name="email"
             value={generalInformation.email || ""}
             placeholder="Enter email"
-            // onChange={changeEmail}
             onChange={changeGeneralInformation}
           />
         </label>
@@ -45,11 +40,9 @@ export default function GeneralInformationForm({
             name="phoneNumber"
             value={generalInformation.phoneNumber || ""}
             placeholder="Enter phone number"
-            // onChange={changePhoneNumber}
             onChange={changeGeneralInformation}
           />
         </label>
-        <input type="submit" />
         <br />
       </form>
     </div>

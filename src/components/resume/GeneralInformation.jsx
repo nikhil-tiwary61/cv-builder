@@ -2,12 +2,7 @@ import "../../styles/GeneralInformation.css";
 import emailPic from "../../../public/email.png";
 import phonePic from "../../../public/phone.png";
 
-export default function GeneralInformation({
-  name,
-  email,
-  phoneNumber,
-  generalInformation,
-}) {
+export default function GeneralInformation({ generalInformation }) {
   return (
     <section className="resume-general-information">
       <div className="username-box">

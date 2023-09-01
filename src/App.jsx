@@ -11,9 +11,6 @@ import Experience from "./components/resume/Experience";
 export default function App() {
   //state variables for General Information
   const [generalInformation, setGeneralInformation] = useState({});
-  const [name, setName] = useState("Nikhil");
-  const [email, setEmail] = useState("abc@xyz.com");
-  const [phoneNumber, setPhoneNumber] = useState("9998886666");
 
   //handle functions to change state variables of General Information
   function changeGeneralInformation(e) {
@@ -21,15 +18,6 @@ export default function App() {
     const value = e.target.value;
     setGeneralInformation({ ...generalInformation, [name]: value });
     console.log(generalInformation);
-  }
-  function changeName(e) {
-    setName(e.target.value);
-  }
-  function changeEmail(e) {
-    setEmail(e.target.value);
-  }
-  function changePhoneNumber(e) {
-    setPhoneNumber(e.target.value);
   }
 
   //state variables for Education Information
@@ -79,9 +67,6 @@ export default function App() {
       <div className="sidebar">
         <Logo />
         <GeneralInformationForm
-          changeName={changeName}
-          changeEmail={changeEmail}
-          changePhoneNumber={changePhoneNumber}
           generalInformation={generalInformation}
           changeGeneralInformation={changeGeneralInformation}
         />
@@ -100,12 +85,7 @@ export default function App() {
       </div>
       <div className="right-side-view">
         <div className="resume">
-          <GeneralInformation
-            generalInformation={generalInformation}
-            name={name}
-            email={email}
-            phoneNumber={phoneNumber}
-          />
+          <GeneralInformation generalInformation={generalInformation} />
           <Education
             institute={institute}
             fieldOfStudy={fieldOfStudy}
